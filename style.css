@@ -1,0 +1,107 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url("Sources/background.jpg") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+button {
+  opacity: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  border-radius: 30px;
+  background: RGBA(0, 0, 0, 0.49);
+  padding: 3% 2%;
+  block-size: fit-content;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputs input[type="text"] {
+  border-radius: 20px;
+  text-align: center;
+  height: 3em;
+  width: 14em;
+  font-weight: bold;
+  font-size: 1.2em;
+  padding: 5%;
+}
+
+.inputs input[type="submit"] {
+  cursor: pointer;
+  height: 3em;
+  width: 14em;
+  border-radius: 30px;
+  background: rgb(128, 128, 128);
+  font-weight: bold;
+  color: white;
+  font-size: 1.2em;
+  margin-top: 30px;
+  border: none;
+}
+
+.inputs input[type="submit"]:hover {
+  background: rgb(165, 165, 165);
+}
+
+.weather {
+  background-color: RGBA(0, 0, 0, 0);
+  height: 40vh;
+  margin: 5vh 0 0 0;
+}
+
+.weather h2 {
+  border-radius: 20px;
+  padding: 10px 0;
+  text-align: center;
+  background: rgb(128, 128, 128);
+  color: white;
+  font-size: 2em;
+}
+
+.temperature {
+  text-align: center;
+  width: 100%;
+  margin: 5vh 0 0 0;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+.condition {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 5vh;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.bi {
+  font-size: 2em;
+}
+
+@media (max-height: 840px) {
+  main {
+    font-size: 0.8rem;
+    height: 80vh;
+  }
+}
