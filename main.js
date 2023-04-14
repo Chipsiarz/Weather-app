@@ -7,26 +7,21 @@ const temperature = document.getElementById("temperature");
 const condition = document.getElementById("condition");
 const conditionIcon = document.getElementById("conditionIcon");
 const conditionName = document.getElementById("conditionName");
-
-apik = "3045dd712ffe6e702e3245525ac7fa38";
+const url = "https://api.openweathermap.org/data/2.5/weather?q=";
 
 function convertion(val) {
   return (val - 273).toFixed(2);
 }
 
 btn.addEventListener("click", function () {
-  fetch(
-    "https://api.openweathermap.org/data/2.5/weather?q=" +
-      cityInput.value +
-      "&appid=" +
-      apik
-  )
+  fetch(url + cityInput.value + "&appid=" + apik)
     .then((res) => res.json())
 
     .then((data) => {
       const nameValue = data["name"];
       const mainTemp = data["main"]["temp"];
       const weatherDesctiption = data["weather"]["0"]["description"];
+      cityInput.value = "";
 
       cityName.innerHTML = `${nameValue}`;
       temperature.innerHTML = `${convertion(mainTemp)} C`;
